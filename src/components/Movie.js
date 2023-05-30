@@ -16,9 +16,9 @@ const Movie = (props) => {
     const movie = movies.find(movie=>movie.id===Number(id));
     
     const clickHandler = e => {
-        
         e.preventDefault();
-        props.deleteMovie(e.target.id)
+        props.deleteMovie(movie.id)
+        push('/movies')
     }
 
 
